@@ -1,0 +1,22 @@
+{
+  "name": "GLMediaCompressor",
+  "version": "0.1.0",
+  "summary": "A short description of GLMediaCompressor.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/vijay-gonuclei/GLMediaCompressor",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "vijay-gonuclei": "vijay.kumar@gonuclei.com"
+  },
+  "source": {
+    "git": "https://github.com/vijay-gonuclei/GLMediaCompressor.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "GLMediaCompressor/Classes/**/*"
+}

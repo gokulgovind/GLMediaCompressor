@@ -1,0 +1,6 @@
+framework module GLMediaCompressor {
+  umbrella header "GLMediaCompressor-umbrella.h"
+
+  export *
+  module * { export * }
+}

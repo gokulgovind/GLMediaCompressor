@@ -1,0 +1,16 @@
+PODS:
+  - GLMediaCompressor (0.1.0)
+
+DEPENDENCIES:
+  - GLMediaCompressor (from `../`)
+
+EXTERNAL SOURCES:
+  GLMediaCompressor:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  GLMediaCompressor: 4913c46cfb4b77d86e0b78112a98740d18674c6c
+
+PODFILE CHECKSUM: 9a12e0f35e46c3038534d5ad4279d3ed3cf10d50
+
+COCOAPODS: 1.8.4
