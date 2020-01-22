@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'GLMediaCompressor_Example' do
+  pod 'GLMediaCompressor', :path => '../'
+
+  target 'GLMediaCompressor_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
