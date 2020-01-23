@@ -26,6 +26,12 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Capture video or image and compress it</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Pick video or image and compress it</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Pick video or image and compress it</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

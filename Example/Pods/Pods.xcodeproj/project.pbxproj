@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4CC50CB42ACA6ECAA8E5ED8C0236484B /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A0A6D3A1B608725A44747D6DA41638 /* ReplaceMe.swift */; };
 		4E3888D8C868A5EB51399283AF7BF9E7 /* GLMediaCompressor-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F38F039B2F5DB2EE53F4C5C94C00BB1 /* GLMediaCompressor-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5230C85435A9839249A7C5022F6C49C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		603A94AC1CB0135E561BE83389AB3399 /* Pods-GLMediaCompressor_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BADA9FA9854AC069B05800851EA486 /* Pods-GLMediaCompressor_Example-dummy.m */; };
@@ -15,6 +14,11 @@
 		83DD4741DBE54BF408AF79C83292002C /* Pods-GLMediaCompressor_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B4043AB011A54B7D7600AB43898C13 /* Pods-GLMediaCompressor_Tests-dummy.m */; };
 		99671F90B692488029D708FA9A39C8E6 /* Pods-GLMediaCompressor_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E7A219409AD439E51FD25DD64B67291 /* Pods-GLMediaCompressor_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9EC8E06277D25B5FBB8CBFE2FF64D635 /* Pods-GLMediaCompressor_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D984623A3EDD51EEC3DC83A6A29B64D9 /* Pods-GLMediaCompressor_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B144630923D7EBED00082444 /* GLImageCompressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B144630723D7EBED00082444 /* GLImageCompressor.swift */; };
+		B144630A23D7EBED00082444 /* GLVideoCompressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B144630823D7EBED00082444 /* GLVideoCompressor.swift */; };
+		B144630E23D7EC0900082444 /* GLVideoCompressionPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = B144630C23D7EC0900082444 /* GLVideoCompressionPreference.swift */; };
+		B144630F23D7EC0900082444 /* GLImageCompressionPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = B144630D23D7EC0900082444 /* GLImageCompressionPreference.swift */; };
+		B144631223D7EC1B00082444 /* GLCompressionUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = B144631123D7EC1B00082444 /* GLCompressionUtility.swift */; };
 		C0D16165A4A58536E82F1B97E2547697 /* GLMediaCompressor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B9ECAB447B87D844510F535449E630 /* GLMediaCompressor-dummy.m */; };
 		E443CF114E94A37DD0055DE1ABA0213E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -40,9 +44,8 @@
 		06623522EC6283573C44E11AEE9C6CF1 /* Pods-GLMediaCompressor_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GLMediaCompressor_Tests.modulemap"; sourceTree = "<group>"; };
 		09B4043AB011A54B7D7600AB43898C13 /* Pods-GLMediaCompressor_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GLMediaCompressor_Tests-dummy.m"; sourceTree = "<group>"; };
 		12D7C368C96BAC6C6891741D4190D1E6 /* Pods-GLMediaCompressor_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GLMediaCompressor_Example.release.xcconfig"; sourceTree = "<group>"; };
-		16A3ED6523DC99D310FE85FAF0FA6A2E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		16A3ED6523DC99D310FE85FAF0FA6A2E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		39A0A6D3A1B608725A44747D6DA41638 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = GLMediaCompressor/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		3A622370D0B86BA6E71AE61D514F55D0 /* Pods-GLMediaCompressor_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GLMediaCompressor_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3C5171ED2031AC1FF04F46415854D9DC /* Pods-GLMediaCompressor_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GLMediaCompressor_Example-frameworks.sh"; sourceTree = "<group>"; };
 		3F38F039B2F5DB2EE53F4C5C94C00BB1 /* GLMediaCompressor-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GLMediaCompressor-umbrella.h"; sourceTree = "<group>"; };
@@ -53,22 +56,27 @@
 		69DC71BFFA7F615B1969646A24A7C02C /* Pods-GLMediaCompressor_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GLMediaCompressor_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		6A595C55C1D4C947A7B665E7E4302B06 /* Pods-GLMediaCompressor_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GLMediaCompressor_Tests-Info.plist"; sourceTree = "<group>"; };
 		6F803AD8F1841348215CC2AD558F0CAE /* GLMediaCompressor-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GLMediaCompressor-prefix.pch"; sourceTree = "<group>"; };
-		816A910BD3F0B45B40A5156A6DB2D50E /* GLMediaCompressor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GLMediaCompressor.framework; path = GLMediaCompressor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		816A910BD3F0B45B40A5156A6DB2D50E /* GLMediaCompressor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GLMediaCompressor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8194900A97CBAEE60BDCDD22D1C61079 /* GLMediaCompressor.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GLMediaCompressor.xcconfig; sourceTree = "<group>"; };
 		973480B78C6D272C2C03F9082553BB67 /* Pods-GLMediaCompressor_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GLMediaCompressor_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		973A2FAC205A9C4CB527FAC7F2AC6616 /* Pods_GLMediaCompressor_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GLMediaCompressor_Example.framework; path = "Pods-GLMediaCompressor_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A2FB8F66064E49D171DD1A0DB643586A /* GLMediaCompressor.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = GLMediaCompressor.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		973A2FAC205A9C4CB527FAC7F2AC6616 /* Pods_GLMediaCompressor_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GLMediaCompressor_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A2FB8F66064E49D171DD1A0DB643586A /* GLMediaCompressor.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = GLMediaCompressor.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A3BADA9FA9854AC069B05800851EA486 /* Pods-GLMediaCompressor_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GLMediaCompressor_Example-dummy.m"; sourceTree = "<group>"; };
 		B10E8E7590E014EA98815665EF6F38B5 /* Pods-GLMediaCompressor_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GLMediaCompressor_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B144630723D7EBED00082444 /* GLImageCompressor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLImageCompressor.swift; sourceTree = "<group>"; };
+		B144630823D7EBED00082444 /* GLVideoCompressor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLVideoCompressor.swift; sourceTree = "<group>"; };
+		B144630C23D7EC0900082444 /* GLVideoCompressionPreference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLVideoCompressionPreference.swift; sourceTree = "<group>"; };
+		B144630D23D7EC0900082444 /* GLImageCompressionPreference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLImageCompressionPreference.swift; sourceTree = "<group>"; };
+		B144631123D7EC1B00082444 /* GLCompressionUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLCompressionUtility.swift; sourceTree = "<group>"; };
 		D7B88D0DD4CE9F4A7CEC9F0B8AC6F764 /* GLMediaCompressor-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GLMediaCompressor-Info.plist"; sourceTree = "<group>"; };
 		D984623A3EDD51EEC3DC83A6A29B64D9 /* Pods-GLMediaCompressor_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GLMediaCompressor_Tests-umbrella.h"; sourceTree = "<group>"; };
 		DDD7D81503C0AA2736FF6994661792DC /* Pods-GLMediaCompressor_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GLMediaCompressor_Example-Info.plist"; sourceTree = "<group>"; };
 		E271A0DE5D5447F098AA26FACF02AC3F /* Pods-GLMediaCompressor_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GLMediaCompressor_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E2FF7CA1908E9CC9CC39005321DAEE84 /* GLMediaCompressor.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GLMediaCompressor.modulemap; sourceTree = "<group>"; };
 		ECD3E5BD7C45C42A5C208327A7DC0EED /* Pods-GLMediaCompressor_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GLMediaCompressor_Example.modulemap"; sourceTree = "<group>"; };
-		F6646A062FC5F3605696BEF1EDA7FC56 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		F72FCE4EF4C82DCA7CD8CADED42A182B /* Pods_GLMediaCompressor_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GLMediaCompressor_Tests.framework; path = "Pods-GLMediaCompressor_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6646A062FC5F3605696BEF1EDA7FC56 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F72FCE4EF4C82DCA7CD8CADED42A182B /* Pods_GLMediaCompressor_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GLMediaCompressor_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,7 +170,9 @@
 		3D06F4137DF462A65EB0C002DF477FD4 /* GLMediaCompressor */ = {
 			isa = PBXGroup;
 			children = (
-				39A0A6D3A1B608725A44747D6DA41638 /* ReplaceMe.swift */,
+				B144630B23D7EBFA00082444 /* Compressor */,
+				B144631023D7EC0C00082444 /* Preference */,
+				B144631123D7EC1B00082444 /* GLCompressionUtility.swift */,
 				ED4DAED112922E32214D61067EE46EE8 /* Pod */,
 				594ABB0FEEA717F473DCD0BB129A39E9 /* Support Files */,
 			);
@@ -182,6 +192,24 @@
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/GLMediaCompressor";
+			sourceTree = "<group>";
+		};
+		B144630B23D7EBFA00082444 /* Compressor */ = {
+			isa = PBXGroup;
+			children = (
+				B144630723D7EBED00082444 /* GLImageCompressor.swift */,
+				B144630823D7EBED00082444 /* GLVideoCompressor.swift */,
+			);
+			path = Compressor;
+			sourceTree = "<group>";
+		};
+		B144631023D7EC0C00082444 /* Preference */ = {
+			isa = PBXGroup;
+			children = (
+				B144630D23D7EC0900082444 /* GLImageCompressionPreference.swift */,
+				B144630C23D7EC0900082444 /* GLVideoCompressionPreference.swift */,
+			);
+			path = Preference;
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -381,8 +409,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B144630E23D7EC0900082444 /* GLVideoCompressionPreference.swift in Sources */,
+				B144630F23D7EC0900082444 /* GLImageCompressionPreference.swift in Sources */,
 				C0D16165A4A58536E82F1B97E2547697 /* GLMediaCompressor-dummy.m in Sources */,
-				4CC50CB42ACA6ECAA8E5ED8C0236484B /* ReplaceMe.swift in Sources */,
+				B144630A23D7EBED00082444 /* GLVideoCompressor.swift in Sources */,
+				B144631223D7EC1B00082444 /* GLCompressionUtility.swift in Sources */,
+				B144630923D7EBED00082444 /* GLImageCompressor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,7 +452,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-GLMediaCompressor_Example/Pods-GLMediaCompressor_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-GLMediaCompressor_Example/Pods-GLMediaCompressor_Example.modulemap";
@@ -453,7 +485,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-GLMediaCompressor_Tests/Pods-GLMediaCompressor_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-GLMediaCompressor_Tests/Pods-GLMediaCompressor_Tests.modulemap";
@@ -486,7 +518,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/GLMediaCompressor/GLMediaCompressor-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/GLMediaCompressor/GLMediaCompressor-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/GLMediaCompressor/GLMediaCompressor.modulemap";
 				PRODUCT_MODULE_NAME = GLMediaCompressor;
@@ -517,7 +549,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-GLMediaCompressor_Tests/Pods-GLMediaCompressor_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-GLMediaCompressor_Tests/Pods-GLMediaCompressor_Tests.modulemap";
@@ -551,7 +583,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-GLMediaCompressor_Example/Pods-GLMediaCompressor_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-GLMediaCompressor_Example/Pods-GLMediaCompressor_Example.modulemap";
@@ -617,13 +649,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -680,7 +711,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -709,7 +740,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/GLMediaCompressor/GLMediaCompressor-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/GLMediaCompressor/GLMediaCompressor-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/GLMediaCompressor/GLMediaCompressor.modulemap";
 				PRODUCT_MODULE_NAME = GLMediaCompressor;
