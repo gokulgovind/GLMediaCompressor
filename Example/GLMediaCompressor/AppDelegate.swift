@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  GLMediaCompressor
 //
-//  Created by vijay-gonuclei on 01/22/2020.
-//  Copyright (c) 2020 vijay-gonuclei. All rights reserved.
+//  Created by gokulgovind on 01/22/2020.
+//  Copyright (c) 2020 gokulgovind. All rights reserved.
 //
 
 import UIKit

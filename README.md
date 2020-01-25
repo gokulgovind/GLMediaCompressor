@@ -1,6 +1,6 @@
 # GLMediaCompressor
 
-[![CI Status](https://img.shields.io/travis/vijay-gonuclei/GLMediaCompressor.svg?style=flat)](https://travis-ci.org/vijay-gonuclei/GLMediaCompressor)
+[![CI Status](https://img.shields.io/travis/gokulgovind/GLMediaCompressor.svg?style=flat)](https://travis-ci.org/gokulgovind/GLMediaCompressor)
 [![Version](https://img.shields.io/cocoapods/v/GLMediaCompressor.svg?style=flat)](https://cocoapods.org/pods/GLMediaCompressor)
 [![License](https://img.shields.io/cocoapods/l/GLMediaCompressor.svg?style=flat)](https://cocoapods.org/pods/GLMediaCompressor)
 [![Platform](https://img.shields.io/cocoapods/p/GLMediaCompressor.svg?style=flat)](https://cocoapods.org/pods/GLMediaCompressor)
@@ -22,7 +22,7 @@ pod 'GLMediaCompressor'
 
 ## Author
 
-vijay-gonuclei, vijay.kumar@gonuclei.com
+gokulgovind, gokulece26@gmail.com
 
 ## License
 
