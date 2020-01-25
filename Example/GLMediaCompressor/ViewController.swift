@@ -33,23 +33,17 @@ class ViewController: UIViewController {
         imagePicker.mediaTypes = ["public.image","public.movie"]
         
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        let photoAction = UIAlertAction(title:"Camera", style: .default, handler: {
+        alertController.addAction(UIAlertAction(title:"Camera", style: .default, handler: {
             action in
             imagePicker.sourceType = .camera
             self.present(imagePicker, animated: true, completion: nil)
-        })
-        let libraryAction = UIAlertAction(title: "Photo & Video Library", style: .default, handler: {
+        }))
+        alertController.addAction(UIAlertAction(title: "Photo & Video Library", style: .default, handler: {
             action in
             imagePicker.sourceType = .savedPhotosAlbum
             self.present(imagePicker, animated: true, completion: nil)
-        })
-        let canceAction = UIAlertAction(title: "Cancel", style: .cancel, handler: {
-            action in
-
-        })
-        alertController.addAction(photoAction)
-        alertController.addAction(libraryAction)
-        alertController.addAction(canceAction)
+        }))
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         present(alertController, animated: true, completion: nil)
     }
 }
@@ -67,7 +61,10 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
                 #if DEBUG
                 compressor.preference.ENABLE_SIZE_LOG = true
                 #endif
-                let compressedImage = compressor.compressImage(image: image)
+                let compressedOutput = compressor.compressImage(image: image)
+                showCompletionAlert(original: compressedOutput.originSize,
+                                    compressed: compressedOutput.compressedSize,
+                                    image: compressedOutput.image)
             }
 
         case "public.movie" :
@@ -78,8 +75,11 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
                 #if DEBUG
                 compressor.preference.ENABLE_SIZE_LOG = true
                 #endif
-                compressor.compressFile(urlToCompress: videoURL, outputURL: outputURL) { (compressedOutputURL) in
-                    
+//                compressor.compressFile(urlToCompress: videoURL, outputURL: outputURL) { (outputURL, originalSize, compressedSize) in
+//                    self.showCompletionAlert(original: originalSize, compressed: compressedSize, videoURl: outputURL.path)
+//                }
+                compressor.compressVideoUsingExportSession(inputURL: videoURL, outputURL: outputURL) { (outputURL, originalSize, compressedSize) in
+                    self.showCompletionAlert(original: originalSize, compressed: compressedSize, videoURl: outputURL.path)
                 }
             }
 
@@ -88,6 +88,24 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         }
         
         self.navigationController?.dismiss(animated: true, completion: nil)
+    }
+    
+    func showCompletionAlert(original: String, compressed: String, videoURl:String? = nil, image:UIImage? = nil) {
+        let alert = UIAlertController(title: nil, message: "Media of \(original) has been compressed to \(compressed)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Save to album", style: .default, handler: { (action) in
+            if let url = videoURl {
+                CustomPhotoAlbum.sharedInstance.save(videoFilePath: url)
+            }else{
+                CustomPhotoAlbum.sharedInstance.save(image: image!)
+            }
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
+            
+        }))
+        DispatchQueue.main.async {
+            self.present(alert, animated: true, completion: nil)
+        }
+        
     }
 }
 

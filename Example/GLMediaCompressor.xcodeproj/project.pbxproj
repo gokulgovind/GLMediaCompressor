@@ -14,6 +14,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		9BC0EAAB3511BEF39BFD5FDD /* Pods_GLMediaCompressor_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABCAFD43354C8B1B9768529 /* Pods_GLMediaCompressor_Example.framework */; };
+		B144631C23D9FA2D00082444 /* CustomPhotoAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = B144631B23D9FA2D00082444 /* CustomPhotoAlbum.swift */; };
 		D36A6D6921D585CCEF93263A /* Pods_GLMediaCompressor_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9099A3095ABCD0DCCB377AB2 /* Pods_GLMediaCompressor_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		8F02DFE8A1AEC2666E190F71 /* GLMediaCompressor.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = GLMediaCompressor.podspec; path = ../GLMediaCompressor.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9099A3095ABCD0DCCB377AB2 /* Pods_GLMediaCompressor_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GLMediaCompressor_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B144631B23D9FA2D00082444 /* CustomPhotoAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPhotoAlbum.swift; sourceTree = "<group>"; };
 		B56852E5BF839B82A7C00C00 /* Pods-GLMediaCompressor_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLMediaCompressor_Tests.debug.xcconfig"; path = "Target Support Files/Pods-GLMediaCompressor_Tests/Pods-GLMediaCompressor_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C1B3C9D61684870430A3213E /* Pods-GLMediaCompressor_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLMediaCompressor_Tests.release.xcconfig"; path = "Target Support Files/Pods-GLMediaCompressor_Tests/Pods-GLMediaCompressor_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C7C53E8004912F0D539F978F /* Pods-GLMediaCompressor_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLMediaCompressor_Example.debug.xcconfig"; path = "Target Support Files/Pods-GLMediaCompressor_Example/Pods-GLMediaCompressor_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				B144631B23D9FA2D00082444 /* CustomPhotoAlbum.swift */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -331,6 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B144631C23D9FA2D00082444 /* CustomPhotoAlbum.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);

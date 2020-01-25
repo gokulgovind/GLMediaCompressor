@@ -19,21 +19,22 @@ public class GLVideoCompressor: NSObject {
     /// Can override the predefined preference by using this.
     public var preference = GLVideoCompressionPreference.shared
     
+    public typealias compressionCompleted =  (_ output: URL, _ originalSize: String, _ compressedSize: String) -> Void
     
-    public func wefwefwefwe(string: String) {
-        print("TESTTTTT: \(string)")
-    }
     /// Uses AVAssetReader & AVAssetWriter to rewrite the video with prefereed Video and audio settings
     ///
     /// - Parameters:
     ///   - urlToCompress: Input || Local URL of video to be compressed
     ///   - outputURL: Output URL of compressed video. This can be from temp folder, After processing the output it can be deleted.
     ///   - completion: Returns the same *outputURL* that has been given as input.
-    public func compressFile(urlToCompress: URL, outputURL: URL, completion:@escaping (URL)->Void){
+    public func compressFile(urlToCompress: URL, outputURL: URL, completion: @escaping compressionCompleted) {
+        var originalSize = "0 MB"
+        var compressedSize = "0 MB"
         //video file to make the asset
         if preference.ENABLE_SIZE_LOG {
             if let data = try? Data(contentsOf: urlToCompress){
-                print("#Video compression before \(data.verboseFileSizeInMB())")
+                originalSize = data.verboseFileSizeInMB()
+                print("#Video compression before \(originalSize)")
             }
         }
         var audioFinished = false
@@ -131,10 +132,12 @@ public class GLVideoCompressor: NSObject {
             if (audioFinished && videoFinished) || !isAudioAvailable && videoFinished {
                 self.assetWriter?.finishWriting(completionHandler: {
                     if let writter = self.assetWriter, self.preference.ENABLE_SIZE_LOG {
+                        
                         if let data = try? Data(contentsOf: writter.outputURL){
-                            print("#Video compression after \(data.verboseFileSizeInMB())")
+                            compressedSize = data.verboseFileSizeInMB()
+                            print("#Video compression after \(compressedSize)")
                         }
-                        completion(writter.outputURL)
+                        completion(writter.outputURL, originalSize, compressedSize)
                     }
                 })
                 
@@ -177,24 +180,42 @@ public class GLVideoCompressor: NSObject {
         }
     }
     
-    /// Uses AVAssetExportSession to compress video
+    /// Uses AVAssetExportSession to compress video,
+    /// If compression failed input url will be given as output, Check debuger consol for logs
     ///
     /// - Parameters:
     ///   - inputURL: Input || Local URL of video to be compressed
     ///   - outputURL: Output URL of compressed video. This can be from temp folder, After processing the output it can be deleted.
     ///   - handler: Returns the same **outputURL** that has been given as input.
-    public func compressVideoUsingExportSession(inputURL: URL, outputURL: URL, handler:@escaping (_ exportSession: AVAssetExportSession?)-> Void) {
+    public func compressVideoUsingExportSession(inputURL: URL, outputURL: URL, handler:@escaping compressionCompleted) {
+        
+        var originalSize = "0 MB"
+        var compressedSize = "0 MB"
+        
+        if preference.ENABLE_SIZE_LOG {
+            if let data = try? Data(contentsOf: inputURL){
+                originalSize = data.verboseFileSizeInMB()
+                print("#Video compression before \(originalSize)")
+            }
+        }
         let urlAsset = AVURLAsset(url: inputURL, options: nil)
         guard let exportSession = AVAssetExportSession(asset: urlAsset, presetName: AVAssetExportPresetMediumQuality) else {
-            handler(nil)
+            if preference.ENABLE_SIZE_LOG { print("#Video compression failed") }
+            handler(inputURL, originalSize, originalSize)
             return
         }
         
         exportSession.outputURL = outputURL
-        exportSession.outputFileType = preference.FILE_TYPE //AVFileTypeQuickTimeMovie (m4v)
+        exportSession.outputFileType = preference.FILE_TYPE
         exportSession.shouldOptimizeForNetworkUse = true
         exportSession.exportAsynchronously { () -> Void in
-            handler(exportSession)
+            if self.preference.ENABLE_SIZE_LOG {
+                if let data = try? Data(contentsOf: outputURL){
+                    compressedSize = data.verboseFileSizeInMB()
+                    print("#Video compression after \(compressedSize)")
+                }
+            }
+            handler(inputURL, originalSize, compressedSize)
         }
     }
     

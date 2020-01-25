@@ -18,24 +18,32 @@ public class GLImageCompressor: NSObject {
     ///
     /// - Parameter image: Input image
     /// - Returns: Out put Image and Data
-    public func compressImage(image: UIImage) -> (UIImage?, Data?) {
+    public func compressImage(image: UIImage) -> (image: UIImage?,originSize: String, compressedSize: String) {
+        var originalSize = "0 KB"
+        var originalImageData:Data?
+        var compressedSize = "0 KB"
+
         if preference.ENABLE_SIZE_LOG {
-            print("#Image compression before: \(UIImageJPEGRepresentation(image, 1)!.verboseFileSizeInMB())")
+            originalImageData = UIImageJPEGRepresentation(image, 1)!
+            originalSize = originalImageData!.verboseFileSizeInKB()
+            print("#Image compression before: \(originalSize)")
         }
         let compressionSize = GLUtility.shared.getCompressionRatio(actualSize: CGSize(width: image.size.width, height: image.size.height), isVideo: false)
         let rect = CGRect(x: 0.0, y: 0.0, width: compressionSize.width, height: compressionSize.height)
         UIGraphicsBeginImageContext(rect.size)
         image.draw(in: rect)
+        
         guard let img = UIGraphicsGetImageFromCurrentImageContext() else {
-            return (nil,nil)
+            return (nil,originalSize,originalSize)
         }
         UIGraphicsEndImageContext()
         guard let imageData = UIImageJPEGRepresentation(img, preference.compressionQuality)else {
-            return (nil,nil)
+            return (nil,originalSize,originalSize)
         }
         if preference.ENABLE_SIZE_LOG {
-            print("#Image compression after: \(imageData.verboseFileSizeInMB())")
+            compressedSize = imageData.verboseFileSizeInKB()
+            print("#Image compression after: \(compressedSize)")
         }
-        return (UIImage(data: imageData),imageData)
+        return (UIImage(data: imageData),originalSize,compressedSize)
     }
 }

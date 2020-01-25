@@ -65,4 +65,12 @@ extension Data {
         let fileSize = bcf.string(fromByteCount: Int64(self.count))
         return fileSize
     }
+    
+    func verboseFileSizeInKB() -> String{
+        let bcf = ByteCountFormatter()
+        bcf.allowedUnits = [.useKB]
+        bcf.countStyle = .file
+        let fileSize = bcf.string(fromByteCount: Int64(self.count))
+        return fileSize
+    }
 }
